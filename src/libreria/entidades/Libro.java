@@ -1,15 +1,14 @@
 package libreria.entidades;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
 public class Libro {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
     private Long isbn;
     
     private String titulo;
@@ -27,7 +26,8 @@ public class Libro {
     public Libro() {
     }
 
-    public Libro(String titulo, Integer anio, Integer ejemplares, Integer ejemplaresPrestados, Integer ejemplaresRestantes, Autor autor, Editorial editorial) {
+    public Libro(Long isbn, String titulo, Integer anio, Integer ejemplares, Integer ejemplaresPrestados, Integer ejemplaresRestantes, Autor autor, Editorial editorial) {
+        this.isbn = isbn;
         this.titulo = titulo;
         this.anio = anio;
         this.ejemplares = ejemplares;
@@ -112,7 +112,7 @@ public class Libro {
     @Override
     public String toString() {
         return "\nISBN=" + isbn + "\nTitulo=" + titulo + "\nAño de publicación:=" + anio + "\nEjemplares=" + ejemplares 
-        + "\nEjemplares Prestados=" + ejemplaresPrestados + "\nEjemplares Restantes=" + ejemplaresRestantes + "\nAlta=" + alta + "\n----------------------------------";
+        + "\nEjemplares Prestados=" + ejemplaresPrestados + "\nEjemplares Restantes=" + ejemplaresRestantes + "\nAlta=" + alta + "\nAutor=" + autor + "\nEditorial=" + editorial + "\n----------------------------------";
     }
     
     

@@ -15,6 +15,8 @@ public class ServicioLibro {
         ServicioAutor aser = new ServicioAutor();
         ServicioEditorial eser = new ServicioEditorial();
         
+        System.out.println("Ingrese el ISBN del libro");
+        libro.setIsbn(leer.nextLong());
         System.out.println("Ingrese el título del libro");
         libro.setTitulo(leer.next());
         System.out.println("Ingrese el nombre del autor");

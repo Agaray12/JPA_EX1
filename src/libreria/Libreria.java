@@ -38,10 +38,10 @@ public class Libreria {
             se.crearEditorial(e3);
 
             //creo Libros
-            Libro l1 = new Libro("Orgullo", 1850, 100, 50, 25, a2, e1);
-            Libro l2 = new Libro("Oliver", 1895, 200, 50, 75, a1, e1);
-            Libro l3 = new Libro("Rayuela", 1948, 300, 50, 45, a3, e3);
-            Libro l4 = new Libro("Tunel", 1920, 150, 75, 20, a4, e2);
+            Libro l1 = new Libro(1000L, "Orgullo", 1850, 100, 50, 25, a2, e1);
+            Libro l2 = new Libro(2000L, "Oliver", 1895, 200, 50, 75, a1, e1);
+            Libro l3 = new Libro(3000L, "Rayuela", 1948, 300, 50, 45, a3, e3);
+            Libro l4 = new Libro(4000L, "Tunel", 1920, 150, 75, 20, a4, e2);
             sl.crearLibro(l1);
             sl.crearLibro(l2);
             sl.crearLibro(l3);
